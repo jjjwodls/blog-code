@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: config-server
+  config:
+    import: optional:file:.env[.properties]
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:jjjwodls/spring-cloud-config
+          private-key: "-----BEGIN OPENSSH PRIVATE KEY-----\n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\n-----END OPENSSH PRIVATE KEY-----\n%"
+          ignore-local-ssh-settings: true  # 시스템 SSH 설정 무시하고 위에서 제공한 private-key 사용
+          clone-on-start: true  # 서버 시작 시 Git에서 설정을 자동으로 클론
+          default-label: main
+          search-paths: config
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, env, refresh
