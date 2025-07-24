@@ -1,0 +1,17 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info  # /actuator/refresh 활성화로 config 업데이트 동기화 가능하도록 선언
+
+spring:
+  config:
+    import: "optional:configserver:"
+  cloud:
+    config:
+      uri: http://localhost:8888  # Config Server의 주소
+      fail-fast: true  # 설정을 못 가져오면 예외 발생
+      retry:
+        max-attempts: 5  # 실패 시 최대 5번 재시도
+      label: main
+      profile: dev
