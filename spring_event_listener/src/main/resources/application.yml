@@ -1,0 +1,12 @@
+logging:
+  level:
+    org.springframework.transaction: trace
+    org.springframework.orm.jpa: debug
+    org.hibernate.transaction: debug
+
+spring:
+  jpa:
+    show-sql: true             # 콘솔에 SQL 출력
+    properties:
+      hibernate:
+        format_sql: true       # SQL 보기 좋게 정렬
