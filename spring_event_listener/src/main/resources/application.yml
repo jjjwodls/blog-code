@@ -3,6 +3,8 @@ logging:
     org.springframework.transaction: trace
     org.springframework.orm.jpa: debug
     org.hibernate.transaction: debug
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%X{requestId}] %-5level %logger{36} - %msg%n"
 
 spring:
   jpa:
