@@ -37,7 +37,7 @@ class PostServiceTest {
     }
 
     @Test
-    @DisplayName("게시글 생성은 실패하는데 notification 에 해당하는 이벤트 리스너가 수신하여 2개 생성된다.")
+    @DisplayName("게시글 생성은 실패하고 실패에 대한 notification 이 해당하는 이벤트 리스너가 수신하여 2개 생성된다.")
     void createPostFailAndSendNotification() {
         PostCreateRequest postCreateRequest = PostCreateRequest.builder()
                 .title("title")
